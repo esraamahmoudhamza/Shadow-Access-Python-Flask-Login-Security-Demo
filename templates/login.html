@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shadow Access</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <div class="card">
+
+    <h2>Shadow Access 🔐</h2>
+
+    <form action="/login" method="POST">
+
+      <div class="input-group">
+        <input type="text" name="username" placeholder=" " required>
+        <label>Username</label>
+      </div>
+
+      <div class="input-group">
+        <input type="password" name="password" placeholder=" " required>
+        <label>Password</label>
+      </div>
+
+      <button type="submit">Enter System</button>
+
+    </form>
+
+    {% if message %}
+      <div class="result {{ status }}">
+        {{ message }}
+      </div>
+    {% endif %}
+
+    <p class="hint">Secure Gateway System</p>
+
+  </div>
+
+</body>
+</html>
