@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #0a0f1c, #05070f);
+  overflow: hidden;
+}
+
+/* glow effect */
+body::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: #00ffcc;
+  filter: blur(160px);
+  opacity: 0.08;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card {
+  width: 360px;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(20, 25, 40, 0.85);
+  border: 1px solid rgba(0, 255, 204, 0.2);
+  backdrop-filter: blur(15px);
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+h2 {
+  color: #00ffcc;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.05);
+  color: white;
+  border: 1px solid rgba(0,255,204,0.2);
+}
+
+label {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  color: #888;
+  transition: 0.3s;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  top: -10px;
+  font-size: 12px;
+  color: #00ffcc;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #00ffcc;
+  color: #0a0f1c;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff0055;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* result box */
+.result {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.success {
+  color: #00ffcc;
+  border: 1px solid #00ffcc;
+}
+
+.fail {
+  color: #ff0055;
+  border: 1px solid #ff0055;
+}
+
+.hint {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #666;
+}
